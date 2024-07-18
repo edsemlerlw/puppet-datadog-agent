@@ -10,31 +10,27 @@
   "dependencies": [
     {
       "name": "puppetlabs/stdlib",
-      "version_requirement": ">=4.25.0 <9.0.0"
+      "version_requirement": ">=4.25.0 <10.0.0"
     },
     {
       "name": "puppetlabs/concat",
-      "version_requirement": ">=4.0.0 <8.0.0"
+      "version_requirement": ">=4.0.0 <10.0.0"
     },
     {
       "name": "puppetlabs/apt",
-      "version_requirement": ">=4.4.0 <9.0.0"
-    },
-    {
-      "name": "puppetlabs/puppetserver_gem",
-      "version_requirement": ">=1.0.0 <2.0.0"
+      "version_requirement": ">=4.4.0 <10.0.0"
     },
     {
       "name": "puppetlabs/yumrepo_core",
-      "version_requirement": ">=1.0.3 < 2.0.0"
+      "version_requirement": ">=1.0.3 < 2.2.0"
     },
     {
       "name": "puppetlabs/powershell",
-      "version_requirement": ">=2.3.0 <5.0.0"
+      "version_requirement": ">=2.3.0 <7.0.0"
     },
     {
       "name": "puppet/zypprepo",
-      "version_requirement": ">=3.1.0 <4.0.0"
+      "version_requirement": ">=3.1.0 <6.0.0"
     }
   ],
   "operatingsystem_support": [
@@ -42,7 +38,9 @@
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
         "6",
-        "7"
+        "7",
+        "8",
+        "9"
       ]
     },
     {
@@ -111,7 +109,9 @@
         "17.04",
         "17.10",
         "18.04",
-        "18.10"
+        "18.10",
+        "20.04",
+        "22.04"
       ]
     },
     {
@@ -122,6 +122,7 @@
         "Server 2012 R2",
         "Server 2016",
         "Server 2019",
+        "Server 2022",
         "7",
         "8",
         "10"
@@ -148,7 +149,7 @@
   "requirements": [
     {
       "name": "puppet",
-      "version_requirement": ">=4.6.0 <8.0.0"
+      "version_requirement": ">=4.6.0 <9.0.0"
     }
   ],
   "description": "This will install the Datadog monitoring agent. Sign up and get your API key at: http://www.datadoghq.com",

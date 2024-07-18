@@ -843,30 +843,30 @@ class datadog_agent(
 
   }
 
-  if $puppet_run_reports {
-    $proxy_config = $agent_extra_options[proxy]
-    if $proxy_config != undef {
-      $proxy_http = $proxy_config[http]
-      $proxy_https = $proxy_config[https]
-    } else {
-      $proxy_http = undef
-      $proxy_https = undef
-    }
+  #if $puppet_run_reports {
+  #  $proxy_config = $agent_extra_options[proxy]
+  #  if $proxy_config != undef {
+  #    $proxy_http = $proxy_config[http]
+  #    $proxy_https = $proxy_config[https]
+  #  } else {
+  #    $proxy_http = undef
+  #    $proxy_https = undef
+  #  }
 
-    class { 'datadog_agent::reports':
-      api_key                   => $api_key,
-      datadog_site              => $reports_url,
-      manage_dogapi_gem         => $manage_dogapi_gem,
-      puppet_gem_provider       => $puppet_gem_provider,
-      dogapi_version            => $datadog_agent::params::dogapi_version,
-      puppetmaster_user         => $puppetmaster_user,
-      hostname_extraction_regex => $hostname_extraction_regex,
-      proxy_http                => $proxy_http,
-      proxy_https               => $proxy_https,
-      report_fact_tags          => $report_fact_tags,
-      report_trusted_fact_tags  => $report_trusted_fact_tags,
-    }
-  }
+  #  class { 'datadog_agent::reports':
+  #    api_key                   => $api_key,
+  #    datadog_site              => $reports_url,
+  #    manage_dogapi_gem         => $manage_dogapi_gem,
+  #    puppet_gem_provider       => $puppet_gem_provider,
+  #    dogapi_version            => $datadog_agent::params::dogapi_version,
+  #    puppetmaster_user         => $puppetmaster_user,
+  #    hostname_extraction_regex => $hostname_extraction_regex,
+  #    proxy_http                => $proxy_http,
+  #    proxy_https               => $proxy_https,
+  #    report_fact_tags          => $report_fact_tags,
+  #    report_trusted_fact_tags  => $report_trusted_fact_tags,
+  #  }
+  #}
 
   create_resources('datadog_agent::integration', $local_integrations)
 
